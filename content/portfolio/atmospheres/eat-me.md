@@ -1,11 +1,10 @@
 ---
-draft: false
-title: Eat Me
-date: 2019-01-20T12:14:34+06:00
+title: Eat Me Too
+date: 2019-01-20T12:14:34.000+06:00
 description: This is meta description.
 thumb: images/eat-me.jpg
----
 
+---
 "A newly invented air-purifying interior material that helps to make better indoor environments by decomposing pollutants in the air"
 
 {{< img src="images/puri-face-01.jpg" >}}
