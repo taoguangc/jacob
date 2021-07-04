@@ -5,6 +5,16 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: content/portfolio
+  label: Portfolio
+  create: all
+  match: "**/*"
+- type: directory
   path: content/about
   label: About
   create: all
@@ -14,16 +24,6 @@ sections:
   label: Contact
   create: all
   match: "**/*"
-- type: directory
-  path: content/portfolio
-  label: Portfolio
-  create: all
-  match: "**/*"
-- type: directory
-  path: content
-  label: Pages
-  create: all
-  match: "*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
