@@ -17,11 +17,6 @@ fields:
 - type: image_gallery
   name: images
   label: images
-- name: gallery
-  type: image_gallery
-  config: {}
-  label: Gallery
-  description: 相册
 - name: blocks
   type: blocks
   label: Blocks
