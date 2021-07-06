@@ -53,3 +53,11 @@ article h3 {
 article p {
   @apply text-base lg:text-lg mb-8;
 }
+
+img {
+  @apply w-full h-auto;
+}
+
+img.radio-3-2 {
+  aspect-ratio: 3/2;
+}
