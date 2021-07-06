@@ -17,12 +17,5 @@ fields:
 - type: image_gallery
   name: images
   label: images
-- name: blocks
-  type: blocks
-  label: Blocks
-  template_types: []
-  config:
-    min: 
-    max: 
 pages:
 - content/work/test-3.md
