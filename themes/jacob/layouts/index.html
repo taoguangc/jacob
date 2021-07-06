@@ -17,7 +17,7 @@
         {{ with .Params.thumb }}
         {{ $img := resources.Get . }}
         {{ $r := $img.Resize "900x webp q85" }}
-        <img src="{{ $r.RelPermalink }}" class="radio-3-2" alt="{{ $alt }}" loading="lazy" decoding="async" />
+        <img src="{{ $r.RelPermalink }}" class="radio-3-2" width="100%" height="auto" alt="{{ $alt }}" loading="lazy" decoding="async" />
         {{end}}
       </a>
     </div>
