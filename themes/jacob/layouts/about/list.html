@@ -4,7 +4,7 @@
     <h1 class="text-7xl">{{ .Description }}</h1>
     <div class="mt-24 grid grid-cols-2">
       {{ range $i,$p := .Params.sections }}
-      <div{{ if not (modBool $i 2) }} class="order-last"{{end}}>
+      <div class="mt-12{{ if not (modBool $i 2) }} order-last{{end}}">
         <h2>{{ .title }}</h2>
         <p>{{ .text }}</p>
       </div>
