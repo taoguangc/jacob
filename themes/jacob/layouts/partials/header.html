@@ -17,7 +17,7 @@
         {{ $active = or $active (eq .Name $current.Title) }}     
         {{ $active = or $active (and (eq (trim (path.Dir .URL) "/") $current.Section) (ne $current.Section "")) }}
         <li>
-          <a class="block transition-colors duration-500 transform hover:text-black{{ if $active }} text-black{{ end }}" href="{{ .URL | absURL }}">
+          <a class="block transition-colors duration-500 transform hover:text-black{{ if $active }} text-red-500{{ end }}" href="{{ .URL | absURL }}">
             {{ .Name }}
           </a>
         </li>
@@ -34,7 +34,7 @@
         {{ $active = or $active (eq .Name $current.Title) }}     
         {{ $active = or $active (and (eq (trim (path.Dir .URL) "/") $current.Section) (ne $current.Section "")) }}
         <li class="relative my-4 text-xl">
-          <a class="block font-light{{ if $active }} text-black{{ end }}" href="{{ .URL | absURL }}">
+          <a class="block font-light{{ if $active }} text-red-500{{ end }}" href="{{ .URL | absURL }}">
             {{ .Name }}
             {{ if $active }}<div class="absolute border-b border-white transition-all duration-500 transform group-hover:w-full w-full" aria-hidden="true"></div>{{ end }}
           </a>
