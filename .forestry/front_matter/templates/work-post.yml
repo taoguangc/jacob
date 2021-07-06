@@ -29,3 +29,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- content/work/test1.md
