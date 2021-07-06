@@ -1,8 +1,7 @@
 ---
 new_page_extension: md
-metaDataFormat: 'yaml'
 auto_deploy: false
-admin_path: 'admin'
+admin_path: admin
 webhook_url: 
 sections:
 - type: directory
