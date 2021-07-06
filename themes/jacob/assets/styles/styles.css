@@ -59,8 +59,16 @@ article p {
   @apply text-lg lg:text-xl mb-8;
 }
 
+article ul {
+  @apply mb-8 lg:mb-16;
+}
+
 article li {
   @apply text-lg lg:text-xl mb-2;
+}
+
+article li h2 {
+  @apply text-2xl lg:text-4xl font-light lg:leading-none py-0 mb-0;
 }
 
 img {
