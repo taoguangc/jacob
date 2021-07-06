@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Jacob"
 theme = "jacob"
 copyright = "Copyright © 2021 Powered by ❤ by "
-
+metaDataFormat = "yaml"
 
 [menu]
 # [[menu.main]]
