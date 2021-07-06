@@ -1,28 +1,43 @@
 {{ define "main" }}
 
 <section class="mt-48 lg:mt-56" id="hero">
-  <div class="mx-auto container lg:px-6">
+  <div class="mx-auto px-6 md:pr-48 lg:pl-12 lg:pr-64">
     <h1>{{ .Title }}</h1>
     <h2>{{ .Description }}</h2>
+    <div class="mt-12 text-xl hover:text-red-500 hover:underline"><a href="/about">⟶ Profile</a></div>
   </div>
 </section>
 
-<section class="w-full flex flex-col items-center" id="mywork">
-  <div class="max-w-7xl flex justify-center flex-wrap">
-    {{ range (where .Site.RegularPages "Type" "portfolio").ByDate | first 8 }}
-    <div class="lg:p-12 sm:w-1/2 text-center">
-      <a class="text-base block duration-700 transform-gpu hover:-translate-y-4" href="{{ .Permalink }}">
+<section class="w-full" id="mywork">
+  <div class="grid grid-cols-12 lg:p-12 gap-16">
+    {{ range (where .Site.RegularPages "Type" "work").ByDate.Reverse | first 3 }}
+    <div class="col-span-7">
+      <a href="{{ .Permalink }}">
         {{ with .Params.thumb }}
         {{ $img := resources.Get . }}
-        {{ $r := $img.Resize "640x webp q85" }}
-        <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="work-thumb" loading="lazy" decoding="async" />
+        {{ $r := $img.Resize "900x webp q85" }}
+        <img src="{{ $r.RelPermalink }}" width="100%" height="auto" alt="work-thumb" loading="lazy" decoding="async" />
         {{end}}
-        <p class="mt-4 mb-10 lg:mt-12 text-sm font-normal">
-          {{ .Title }}
-        </p>
+      </a>
+    </div>
+    <div class="col-span-5 flex flex-col justify-end">
+      <h3>{{ .Title }}</h3>
+      <h4>{{ .Description }}</h4>
+      <a class="mt-8 text-lg font-black block duration-500 transform-gpu hover:-translate-y-1 hover:text-red-500 hover:underline" href="{{ .Permalink }}">
+        ⟶
       </a>
     </div>
     {{ end }}
+    <div class="col-span-12 text-right"><a href="/work" class="text-3xl hover:text-red-500 hover:underline">⟶ More work</a></div>
+  </div>
+</section>
+
+<section class="my-32 grid grid-cols-12 lg:p-12">
+  <div class="col-span-12 lg:col-span-7">
+    <h2 class="text-6xl font-bold leading-tight">Want to know more or have a project in mind?</h2>
+  </div>
+  <div class="mt-12 col-span-12">
+    <a href="/contact" class="text-3xl hover:text-red-500 hover:underline">⟶ Let’s have a chat!</a></div>
   </div>
 </section>
 

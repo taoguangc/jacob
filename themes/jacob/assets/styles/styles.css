@@ -11,19 +11,19 @@ body {
 }
 
 h1 {
-  @apply text-4xl font-semibold mb-4 md:text-5xl lg:text-6xl lg:leading-normal;
+  @apply text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 lg:leading-normal;
 }
 
 h2 {
-  @apply text-4xl lg:text-5xl font-normal lg:leading-normal mb-3;
+  @apply text-xl md:text-2xl lg:text-4xl font-normal lg:leading-normal mb-3;
 }
 
 h3 {
-  @apply text-2xl font-bold mb-3;
+  @apply text-5xl mb-1;
 }
 
 h4 {
-  @apply text-lg font-semibold tracking-wider mb-3;
+  @apply uppercase text-base tracking-wider mb-3;
 }
 
 p {
@@ -39,7 +39,7 @@ header nav a {
 }
 
 article h1 {
-  @apply px-6 py-12 lg:py-28 mb-0 lg:text-base font-medium;
+  @apply text-4xl lg:text-5xl mb-0 font-bold leading-tight;
 }
 
 article h2 {
@@ -51,5 +51,5 @@ article h3 {
 }
 
 article p {
-  @apply px-6 pt-2 pb-6 lg:px-48 lg:pt-4 lg:pb-16 text-sm lg:text-lg font-light;
+  @apply text-base lg:text-lg mb-8;
 }
