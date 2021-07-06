@@ -25,7 +25,7 @@ fields:
     config:
       required: false
     label: Title
-  - name: content
+  - name: text
     type: textarea
     default: ''
     config:
@@ -33,7 +33,7 @@ fields:
       wysiwyg: false
       schema:
         format: markdown
-    label: Content
+    label: Text
   config:
     min: 
     max: 
