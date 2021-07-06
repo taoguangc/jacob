@@ -4,10 +4,11 @@
     {{ range .Pages.ByDate.Reverse }}
     <div>
       <a class="text-base block relative" href="{{ .Permalink }}">
+        {{ $alt := .Title }}
         {{ with .Params.thumb }}
         {{ $img := resources.Get . }}
         {{ $r := $img.Fill "720x480 webp q85" }}
-        <img src="{{ $r.RelPermalink }}" class="radio-3-2" alt="work-thumb" loading="lazy" decoding="async" />
+        <img src="{{ $r.RelPermalink }}" class="radio-3-2" alt="{{ $alt }}" loading="lazy" decoding="async" />
         {{end}}
         <div class="duration-500 transform-gpu opacity-0 hover:opacity-100 absolute inset-0 pl-12 pt-16 text-white bg-black">
           <h2 class="mb-0">{{ .Title }}</h2>
