@@ -17,6 +17,14 @@ fields:
 - type: image_gallery
   name: images
   label: images
+- name: gallery
+  type: blocks
+  template_types:
+  - blocks
+  config:
+    min: 
+    max: 
+  label: Gallery
 pages:
 - content/work/den-bornholmske-dialekt.md
 - content/work/gunn-architects.md
