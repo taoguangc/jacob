@@ -17,14 +17,68 @@ fields:
 - type: image_gallery
   name: images
   label: images
-- name: gallery
-  type: blocks
-  template_types:
-  - blocks
+- name: grid
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: col-span
+    type: select
+    default: '12'
+    config:
+      required: false
+      options:
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      - '8'
+      - '9'
+      - '10'
+      - '11'
+      - '12'
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: col-span
   config:
     min: 
     max: 
-  label: Gallery
+    labelField: 
+  label: Grid
+- name: grid2
+  type: field_group
+  config: {}
+  fields:
+  - name: img
+    type: file
+    config:
+      maxSize: 64
+    label: img
+  - name: col
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - '1'
+      - '2'
+      - '3'
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: col
+  label: Grid2
 pages:
 - content/work/den-bornholmske-dialekt.md
 - content/work/gunn-architects.md
