@@ -1,4 +1,4 @@
-baseURL = "https://jacob.netlify.app/"
+baseURL = "https://jacob.vercel.app/"
 languageCode = "en-us"
 title = "Jacob"
 theme = "jacob"
