@@ -21,6 +21,8 @@ sections:
   label: About
   create: all
   match: "**/*"
+  templates:
+  - about
 - type: directory
   path: content/contact
   label: Contact
