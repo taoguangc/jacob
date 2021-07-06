@@ -1,5 +1,14 @@
 <header class="w-full bg-white fixed z-20 top-0 left-0 right-0">
-  <nav class="px-8 py-4 container mx-auto flex justify-between items-center flex-wrap" x-data="{ isOpen: false }">
+  <nav class="px-12 py-8 mx-auto text-lg flex justify-between items-center flex-wrap" x-data="{ isOpen: false }">
+    <div class="flex items-center">
+      <a href="{{ site.BaseURL }}" aria-label="{{ site.Title }}" class="text-base text-black">
+        Jacob
+      </a>
+    </div>
+
+    <div class="sm:hidden">
+    </div>
+
     <div class="hidden sm:block lg:flex lg:items-center lg:w-auto text-center">
       <ul class="flex space-x-8">
         {{ $current := . }}
@@ -16,8 +25,6 @@
       </ul>
     </div>
 
-    <div class="sm:hidden">
-    </div>
     <!--Mobile menu-->
     <div class="sm:hidden z-20 absolute inset-0 w-full h-screen bg-white flex items-center" x-show="isOpen" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="transform translate-x-full" x-transition:leave="transition ease-in duration-500" x-transition:leave-end="transform -translate-x-full">
       <ul class="mx-auto flex flex-col items-center">
@@ -34,12 +41,6 @@
         </li>
         {{ end }}
       </ul>
-    </div>
-    
-    <div class="flex items-center">
-      <a href="{{ site.BaseURL }}" aria-label="{{ site.Title }}" class="text-base text-black">
-        Taiho
-      </a>
     </div>
 
     <!--Toggle button (hidden on large screens)-->

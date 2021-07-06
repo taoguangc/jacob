@@ -31,7 +31,7 @@ p {
 }
 
 header nav a {
-  @apply text-gray-400;
+  @apply uppercase font-semibold;
 }
 
 .menu-mobile {
