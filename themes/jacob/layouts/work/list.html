@@ -6,7 +6,7 @@
       <a class="text-base block relative" href="{{ .Permalink }}">
         {{ with .Params.thumb }}
         {{ $img := resources.Get . }}
-        {{ $r := $img.Resize "720x webp q85" }}
+        {{ $r := $img.Fill "720x480 webp q85" }}
         <img src="{{ $r.RelPermalink }}" width="100%" height="auto" alt="work-thumb" loading="lazy" decoding="async" />
         {{end}}
         <div class="duration-500 transform-gpu opacity-0 hover:opacity-100 absolute inset-0 pl-12 pt-16 text-white bg-black">
