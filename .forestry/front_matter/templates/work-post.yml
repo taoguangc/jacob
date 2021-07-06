@@ -18,5 +18,6 @@ fields:
   name: images
   label: images
 pages:
+- content/work/gunn-architects.md
 - content/work/test-3.md
 - content/work/test-4.md
