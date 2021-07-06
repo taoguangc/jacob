@@ -33,7 +33,7 @@
         {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
         {{ $active = or $active (eq .Name $current.Title) }}     
         {{ $active = or $active (and (eq (trim (path.Dir .URL) "/") $current.Section) (ne $current.Section "")) }}
-        <li class="relative my-4 text-xl" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="{{ mul $i 200 }}">
+        <li class="relative my-4 text-xl">
           <a class="block font-light{{ if $active }} text-black{{ end }}" href="{{ .URL | absURL }}">
             {{ .Name }}
             {{ if $active }}<div class="absolute border-b border-white transition-all duration-500 transform group-hover:w-full w-full" aria-hidden="true"></div>{{ end }}
