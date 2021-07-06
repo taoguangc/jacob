@@ -1,9 +1,20 @@
 {{ define "main" }}
-<article class="w-full my-24">
-  <div class="mx-auto max-w-6xl text-center">
-    <h1>{{ .Description }}</h1>
-    <div class="w-full">
-      {{ .Content }}
+<article class="w-full lg:mt-48">
+  <div class="mx-auto lg:p-12">
+    <h1 class="text-7xl">{{ .Description }}</h1>
+    <div class="mt-24 grid grid-cols-2">
+      {{ range $i,$p := .Params.sections }}
+      <div{{ if not (modBool $i 2) }} class="order-last"{{end}}>
+        <h2>{{ .title }}</h2>
+        <p>{{ .text }}</p>
+      </div>
+      <div></div>
+      {{end}}
+    </div>
+    <div class="mt-24 grid grid-cols-2">
+      <div>
+        {{ .Content }}
+      </div>
     </div>
   </div>
 </article>

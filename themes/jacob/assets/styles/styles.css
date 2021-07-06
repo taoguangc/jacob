@@ -39,12 +39,16 @@ header nav a {
   @apply sm:hidden z-50 inline-flex items-center justify-center p-2 text-white focus:outline-none;
 }
 
+article {
+  @apply font-normal;
+}
+
 article h1 {
   @apply text-4xl lg:text-5xl mb-0 font-bold leading-tight;
 }
 
 article h2 {
-  @apply py-8 text-sm lg:text-lg font-light;
+  @apply py-8 text-xl lg:text-4xl font-semibold;
 }
 
 article h3 {
@@ -52,7 +56,11 @@ article h3 {
 }
 
 article p {
-  @apply text-base lg:text-lg mb-8;
+  @apply text-lg lg:text-xl mb-8;
+}
+
+article li {
+  @apply text-lg lg:text-xl mb-2;
 }
 
 img {
