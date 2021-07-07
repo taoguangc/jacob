@@ -5,8 +5,8 @@ description: Brand Implementation, Stationary, Brochures & Editorial
 thumb: images/gunn.jpg
 images:
 - "/images/gunn-01.jpg"
-- "/images/gunn-02.png"
-- "/images/gunn-03.jpg"
+- "/images/gunn-02.jpg"
+- "/images/gunn-03.png"
 - "/images/gunn-04.jpg"
 - "/images/gunn-05.jpg"
 - "/images/gunn-06.jpg"
