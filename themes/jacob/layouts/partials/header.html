@@ -1,7 +1,7 @@
 <header class="w-full bg-white fixed z-20 top-0 left-0 right-0">
-  <nav class="px-12 py-8 mx-auto text-lg flex justify-between items-center flex-wrap" x-data="{ isOpen: false }">
+  <nav class="px-12 py-8 mx-auto text-lg flex justify-between items-center flex-wrap" x-data="{ open: false }">
     <div class="flex items-center">
-      <a href="{{ site.BaseURL }}" aria-label="{{ site.Title }}" class="text-2xl text-black">
+      <a href="{{ site.BaseURL }}" aria-label="{{ site.Title }}" class="text-2xl">
         Jacob
       </a>
     </div>
@@ -44,12 +44,12 @@
     </div>
 
     <!--Toggle button (hidden on large screens)-->
-    <button type="button" class="menu-mobile" @click="isOpen = !isOpen" aria-controls="mobile-menu" aria-expanded="false">
+    <button type="button" class="menu-mobile" @click="open = !open" aria-controls="mobile-menu" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
-      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" aria-hidden="true" x-show="!isOpen">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" aria-hidden="true" x-show="!open">
         <path d="M0 6.5H24V5.5H0V6.5ZM0 18.5H24V17.5H0V18.5ZM0 12.5H12V11.5H0V12.5ZM12 12.5H24V11.5H12V12.5Z" />
       </svg>
-      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" aria-hidden="true" x-show="isOpen">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" aria-hidden="true" x-show="open">
         <path d="M2 2L22 22M2 22L22 2L2 22Z" />
       </svg>
     </button>

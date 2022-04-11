@@ -27,4 +27,4 @@ x-transition:leave-end="opacity-0 translate-y-16 transform"
 {{- end }}
 {{- $bundleJS := $slice | resources.Concat "scripts/bundle.js" | js.Build (dict "minify" true "target" "es2015") }}
 {{- $bundleJS = printf "%s?v=%d" $bundleJS.RelPermalink now.Unix }}
-<script src="{{ $bundleJS | safeHTML }}" defer></script>
+<script src="{{ $bundleJS | safeHTML }}"></script>
